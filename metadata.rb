@@ -42,8 +42,8 @@ attribute "kube-hops/fallback_dns",
           :description =>  "IP of the fallback DNS server for non-cluster resolution",
           :type => 'string'
 
-attribute "kube-hops/flannel/iface-regex",
-          :description =>  "iface-regex to configure flannel daemonset",
+attribute "kube-hops/flannel/iface",
+          :description =>  "Interface for inter-host communication",
           :type => 'string'
 
 attribute "kube-hops/apiserver/port",

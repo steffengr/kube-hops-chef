@@ -123,7 +123,9 @@ spec:
         args:
         - --ip-masq
         - --kube-subnet-mgr
-        - --iface-regex=<%= @regex %>
+        <% if !node['kube-hops']['flannel']['iface'].empty? %>
+        - --iface=<%= node['kube-hops']['flannel']['iface'] %>
+        <% end %>
         resources:
           requests:
             cpu: "100m"
